@@ -1,0 +1,13 @@
+
+import sys
+import re
+
+with open(sys.argv[1], 'r') as test_cases:
+    for test in test_cases:
+	if (len(test)>1):
+	    m = re.findall(r'{\"id\": \d+, \"label\": \"Label \d+\"}',test) 
+	    suma = 0
+	    for s in m:
+		m1 = result=[x for x in re.split(',| ',s) if x!='']
+		suma += int(m1[1])
+	    print suma

@@ -1,0 +1,6 @@
+# 
+*.o
+*.out
+*.jpg
+*.pdf
+*swp*
